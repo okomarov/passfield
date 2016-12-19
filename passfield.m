@@ -76,6 +76,10 @@ classdef passfield < hgsetget
             % Create java peer
             obj.hjpeer = handle(javaObjectEDT('javax.swing.JPasswordField'), 'CallbackProperties');
             
+            % Fix traversal cycle
+            obj.hjpeer.setFocusable(true);
+            obj.hjpeer.putClientProperty('TabCycleParticipant', true);
+            
             % Get parent
             pos = find(~cellfun('isempty',strfind(varargin(1:2:end), 'Parent')));
             if isempty(pos)
