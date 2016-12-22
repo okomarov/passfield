@@ -1,16 +1,14 @@
 function answer = passdlg(uitype, varargin)
 % PASSDLG Create and open password dialog box
 %   
-%   PASSDLG(UITYPE) Supports several types of dialogs. It will 
-%                   always produce one masked password field and
-%                   can add the following optional components:
-%                       - Username field
-%                       - Password confirmation field
-%                       - Show/hide password checkbox
+%   PASSDLG(UITYPE) It will always produce one masked password field plus the  
+%       optional components:
+%           - 'u' or 'UsernameField'
+%           - 'c' or 'ConfirmPass'
+%           - 's' or 'ShowHideCheckBox'
 %
-%                   UITYPE can be a cell array combining 'UsernameField', 
-%                   'ConfirmPass' and 'ShowHideCheckBox', or a char string
-%                   with the initial letters 'u', 'c' and 's', e.g. 'cs'.
+%       UITYPE can be a cell array with above named fields or a string with
+%       the initial letters 'u', 'c' and 's', e.g. passdlg('cs').
 % 
 %   PASSDLG(..., Name, Value) Supports Name/Value pairs of <a href="matlab: doc figure-properties">figure properties</a>.
 %
