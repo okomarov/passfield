@@ -1,6 +1,3 @@
-##### Description
-Create masked edit box for password input
-
 ![password field](https://raw.githubusercontent.com/okomarov/passfield/master/Example.PNG)
 
 ##### Syntax
@@ -27,6 +24,11 @@ Create masked edit box for password input
 
 
 ##### Examples:
+
+    passdlg();
+    passdlg('us');
+    passdlg usc
+
  
 See also: [Uicontrol Properties](http://www.mathworks.co.uk/help/matlab/ref/uicontrol_props.html), [uicontrol](http://www.mathworks.co.uk/help/matlab/ref/uicontrol.html), javacomponent
 
