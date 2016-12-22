@@ -4,15 +4,21 @@ Create masked edit box for password input
 ![password field](https://raw.githubusercontent.com/okomarov/passfield/master/Example.PNG)
 
 ##### Syntax
-    passfield(Name, Value) Supports Name/Value pair syntax as in
-                           [uicontrol()](http://www.mathworks.co.uk/help/matlab/ref/uicontrol.html). 
-                           For valid properties refer to the Uicontrol Properties.
-                           
-  
-    Additional properties:
-      'EchoChar'  -   character displayed in field
-      'Password'  -   plain text string of the password
+    passdlg(uitype) It will always produce one masked password field plus the  
+           optional components:
+             * 'u' or 'UsernameField'
+             * 'c' or 'ConfirmPass'
+             * 's' or 'ShowHideCheckBox'
 
+           UITYPE can be a cell array with above named fields or a string with
+           the initial letters 'u', 'c' and 's', e.g. passdlg('cs').
+
+    passdlg(..., Name, Value) For valid Name/Value pairs refer to Figure Properties
+
+    passfield(Name, Value) For valid Name/Value pairs refer to the Uicontrol Properties
+           plus the following:
+             * 'EchoChar'  -   character displayed in field
+             * 'Password'  -   plain text string of the password
 
 ##### Warning: 
 
